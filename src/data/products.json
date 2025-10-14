@@ -1,0 +1,91 @@
+{
+    
+    "catagories":[
+        {
+            "titile":" Revamp your home in style",
+            "images":[
+                 { "image": "/assets/img1.png", "name": "Home storage" },
+                 { "image": "/assets/img2.png", "name": "Lighting solutions" },
+                 { "image": "/assets/img3.png", "name": "Kitchen essentials" },
+                 { "image": "/assets/img4.png", "name": "Decor items" }
+            ]
+        },
+
+
+       {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/assets/img5.png" },
+                {  "image": "/assets/img6.png" },
+                {  "image": "/assets/img7.png" },
+                {  "image": "/assets/img8.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/assets/img9.png" },
+                {  "image": "/assets/img10.png" },
+                {  "image": "/assets/img11.png" },
+                {  "image": "/assets/img12.png" }
+            ]
+        },
+        {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/assets/img13.png" },
+                {  "image": "/assets/img14.png" },
+                {  "image": "/assets/img15.png" },
+                {  "image": "/assets/img16.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                 {  "image": "/assets/img17.png" },
+                {  "image": "/assets/img18.png" },
+                {  "image": "/assets/img19.png" },
+                {  "image": "/assets/img20.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/public/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" }
+            ]
+        },
+         {
+            "titile":" Revamp your home in style",
+            "images":[
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" },
+                {  "image": "/images/img1.png" }
+            ]
+        }
+
+
+
+    ]
+}
