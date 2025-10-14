@@ -4,10 +4,10 @@
         {
             "titile":" Revamp your home in style",
             "images":[
-                 { "image": "/assets/img1.png", "name": "Home storage" },
-                 { "image": "/assets/img2.png", "name": "Lighting solutions" },
-                 { "image": "/assets/img3.png", "name": "Kitchen essentials" },
-                 { "image": "/assets/img4.png", "name": "Decor items" }
+                {  "image": "/assets/img1.png" },
+                {  "image": "/assets/img2.png" },
+                {  "image": "/assets/img3.png" },
+                {  "image": "/assets/img4.png" }
             ]
         },
 
