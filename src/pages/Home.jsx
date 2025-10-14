@@ -48,21 +48,17 @@ const Home = () => {
                     {category.titile}
                   </Card.Title>
                   <Row className="mt-2 g-2">
-                   {category.images.map((item, i) => (
+                  {category.images.map((item, i) => (
   <Col xs={6} key={i} className="text-center">
     <img
-      src={item.image}
+      src={item.image}       // direct URL from public folder
       alt={item.name}
-      style={{
-        width: "100%",
-        height: "80px",
-        objectFit: "cover",
-        borderRadius: "5px",
-      }}
+      style={{ width: "100%", height: "80px", objectFit: "cover", borderRadius: "5px" }}
     />
     <p style={{ fontSize: "12px", marginTop: "5px" }}>{item.name}</p>
   </Col>
 ))}
+
 
                   </Row>
                   <p>explore all</p>
