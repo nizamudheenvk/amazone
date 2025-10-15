@@ -1,5 +1,7 @@
 import React from 'react'
 import { Button, Card, Container, Form } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -92,16 +94,20 @@ const Auth = ({insideRegister}) => {
            {insideRegister?
            <div className="mt-3" style={{ fontSize: "13px" }}>
               Already have an account?{" "}
-              <a href="/" style={{ textDecoration: "none" }}>
+              {/* <a href="/" style={{ textDecoration: "none" }}>
                 Login ▸
-              </a>
+              </a> */}
+              <Link to={'/'}style={{textDecoration:"none"}}>login</Link>
             </div>
             :
              <div className="mt-3" style={{ fontSize: "13px" }}>
              New User? please click here to{" "}
-              <a href="/register" style={{ textDecoration: "none" }}>
+              {/* <a href="/register" style={{ textDecoration: "none" }}>
                 Register ▸
-              </a>
+              </a> */}
+
+              <Link to={'/register'} style={{textDecoration:"none"}}>
+              Register ▸</Link>
             </div>
             }
 
