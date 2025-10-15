@@ -4,86 +4,83 @@
         {
             "titile":" Revamp your home in style",
             "images":[
-                {  "image": "/assets/img1.png" },
-                {  "image": "/assets/img2.png" },
-                {  "image": "/assets/img3.png" },
-                {  "image": "/assets/img4.png" }
+       { "image": "/assets/img1.png", "name": "Cushion covers, bedsheets & more" },
+        { "image": "/assets/img2.png", "name": "Figurines, vases & more" },
+        { "image": "/assets/img3.png", "name": "Home storage" },
+        { "image": "/assets/img4.png", "name": "Lighting solutions" }
             ]
         },
 
 
        {
-            "titile":" Revamp your home in style",
+            "titile":" Appliances for your home| Up to 55% off",
             "images":[
-                {  "image": "/assets/img5.png" },
-                {  "image": "/assets/img6.png" },
-                {  "image": "/assets/img7.png" },
-                {  "image": "/assets/img8.png" }
+                {  "image": "/assets/img5.png" ,"name": "Air Conditioners" },
+                {  "image": "/assets/img6.png","name": "Refrigerators" },
+                {  "image": "/assets/img7.png" ,"name": "Microwabes"},
+                {  "image": "/assets/img8.png","name": "Washing machines" }
             ]
         },
          {
-            "titile":" Revamp your home in style",
+            "titile":" Starting $149 | Headphones",
             "images":[
-                {  "image": "/assets/img9.png" },
-                {  "image": "/assets/img10.png" },
-                {  "image": "/assets/img11.png" },
-                {  "image": "/assets/img12.png" }
+                {  "image": "/assets/img9.png","name": "Starting ₹249| boAt" },
+                {  "image": "/assets/img10.png","name": "Starting ₹649| Noise" },
+                {  "image": "/assets/img11.png","name": "Starting ₹349| boult" },
+                {  "image": "/assets/img12.png","name": "Starting ₹149| Zebronics" }
             ]
         },
         {
-            "titile":" Revamp your home in style",
+            "titile":" Starting $99| Amazon Brands & more",
             "images":[
-                {  "image": "/assets/img13.png" },
-                {  "image": "/assets/img14.png" },
-                {  "image": "/assets/img15.png" },
-                {  "image": "/assets/img16.png" }
+                {  "image": "/assets/img13.png","name": "Staring ₹299|Home storage &..." },
+                {  "image": "/assets/img14.png","name": "Up to 60% off |Storage &racks" },
+                {  "image": "/assets/img15.png","name": "Staring ₹99|Toys & games" },
+                {  "image": "/assets/img16.png","name": "Up to 60% off| Jackets,dresses &..." }
             ]
         },
          {
-            "titile":" Revamp your home in style",
+            "titile":"Automotive essentials| Up to 60% off",
             "images":[
-                 {  "image": "/assets/img17.png" },
-                {  "image": "/assets/img18.png" },
-                {  "image": "/assets/img19.png" },
-                {  "image": "/assets/img20.png" }
+                 {  "image": "/assets/img17.png","name": "Cleaning accessories" },
+                {  "image": "/assets/img18.png","name": "Tyre & rim care" },
+                {  "image": "/assets/img19.png","name": "Helmets" },
+                {  "image": "/assets/img20.png","name": "Vacuum cleaner" }
             ]
         },
          {
-            "titile":" Revamp your home in style",
+            "titile":" Up to 60% off | Styles for women",
             "images":[
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" }
+                {  "image": "/assets/img21.png","name": "Women’s Clothing" },
+                {  "image": "/assets/img22.png","name": "Watches" },
+                {  "image": "/assets/img23.png" ,"name": "Footwear+Handbags"},
+                {  "image": "/assets/img24.png","name": "CFashion jewellery" }
+            ]
+        },
+
+
+
+
+
+         {
+            "titile":" Starting ₹199 | Amazon Brands & more",
+            "images":[
+                {  "image": "/assets/img25.png","name": "CStarting $199| Bedsheets" },
+                {  "image": "/assets/img26.png","name": "Minimum 40% off | Ironing board & more" },
+                {  "image": "/assets/img27.png" ,"name": "Starting $199| Curtains"},
+                {  "image": "/assets/img28.png","name": "Up to 60% off | Home decor" }
             ]
         },
          {
-            "titile":" Revamp your home in style",
+            "titile":" Starting ₹99 | Home improvement essentials",
             "images":[
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" }
-            ]
-        },
-         {
-            "titile":" Revamp your home in style",
-            "images":[
-                {  "image": "/public/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" }
-            ]
-        },
-         {
-            "titile":" Revamp your home in style",
-            "images":[
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" },
-                {  "image": "/images/img1.png" }
+                {  "image": "/assets/img1.png","name": "Spin mops, wipes & more" },
+                {  "image": "/assets/img2.png","name": "Hammers, screwdrivers & more" },
+                {  "image": "/assets/img3.png" ,"name": "Bathroom hardware & accessories"},
+                {  "image": "/assets/img4.png","name": "Cushion covers, bedsheets & more" }
             ]
         }
+         
 
 
 
