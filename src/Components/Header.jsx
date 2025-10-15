@@ -37,6 +37,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search Amazon.in"
                 className="form-control rounded-0"
+                insideCart={true}
               />
               <button
                 style={{ backgroundColor: "#f3a847", border: "none", padding: "0 12px" }}
@@ -58,7 +59,7 @@ const Header = () => {
 
               <div className="text-nowrap">
                 <small>Returns</small><br />
-                <strong>& Orders</strong>
+                <Link to={'/orders'} style={{textDecoration:"none"}}><strong style={{ color:"white"}}>& Orders</strong></Link>
               </div>
 
               <Link to="/cart" className="text-white text-decoration-none">
