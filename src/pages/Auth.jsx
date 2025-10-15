@@ -1,12 +1,86 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Container, Form } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { loginApi, registerApi } from '../SERVICES/allApi'
+
 
 
 
 
 
 const Auth = ({insideRegister}) => {
+
+
+
+ const [userInput,setUserinput] = useState({username:"",email:"",password:""
+
+   })
+   console.log(userInput);
+   const navigate = useNavigate()
+
+
+   const register = async(e)=>{
+    e.preventDefault()
+ if(userInput.username && userInput.email && userInput.password){
+
+    try{
+        const result = await registerApi(userInput)
+        if(result.status==200){
+            alert(`welcome ${userInput?.username} `)
+            navigate('/')
+        }else{
+            if(result.response.status==406){
+                alert(result.response.data)
+                setUserinput({username:"",email:"",password:""})
+            }
+        }
+
+    }catch(err){
+        console.log(err);
+        
+    }
+
+ }else{
+    alert("please fil the form")
+ }
+
+}
+
+
+const login = async(e)=>{
+e.preventDefault()
+
+    if(userInput.email && userInput.password){
+      try{
+        const result = await loginApi(userInput)
+        console.log(result);
+        
+        if (result.status==200){
+            sessionStorage.setItem("user",JSON.stringify(result.data.user))
+            sessionStorage.setItem("token",result.data.token)
+             navigate('/home')
+             setUserinput({username:"",email:"",password:""})
+        }else{
+            if(result.response.status==404){
+                alert(result.response.data)
+            }
+
+        }
+
+      }catch(err){
+        console.log(err);
+        
+      }
+
+    }else{
+        alert("pleae fill the form completely")
+    }
+}
+
+
+
+
+
   return (
    <>
      <div
@@ -35,8 +109,8 @@ const Auth = ({insideRegister}) => {
              { 
               insideRegister&&
               <Form.Group className="mb-3" controlId="formName">
-                <Form.Label style={{ fontSize: "14px" }}>Your name</Form.Label>
-                <Form.Control type="text" />
+                <Form.Label style={{ fontSize: "14px" }}>username</Form.Label>
+                <Form.Control  value={userInput.username}  onChange={e=>setUserinput({...userInput,username:e.target.value})} type="text" />
               </Form.Group>
               }
 
@@ -44,16 +118,17 @@ const Auth = ({insideRegister}) => {
                 <Form.Label style={{ fontSize: "14px" }}>
                  email
                 </Form.Label>
-                <Form.Control type="text" />
+                <Form.Control  value={userInput.email}  onChange={e=>setUserinput({...userInput,email:e.target.value})} type="text" />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formPassword">
                 <Form.Label style={{ fontSize: "14px" }}>Password</Form.Label>
-                <Form.Control type="password" />
+                <Form.Control  value={userInput.password}  onChange={e=>setUserinput({...userInput,password:e.target.value})} type="password" />
               </Form.Group>
 
             { insideRegister? 
             <Button
+                onClick={register}
                 className="w-100"
                 style={{
                   backgroundColor: "#f0c14b",
@@ -63,10 +138,12 @@ const Auth = ({insideRegister}) => {
                 }}
               >
                 Register
+               
               </Button>
               
             :
              <Button
+             onClick={login}
                 className="w-100"
                 style={{
                   backgroundColor: "#f0c14b",
