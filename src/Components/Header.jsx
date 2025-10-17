@@ -1,8 +1,34 @@
 import React from 'react';
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../googleSign/config"; // ✅ adjust path if needed
+
 
 const Header = () => {
+
+const navigate = useNavigate();
+
+const handleLogout = async () => {
+  try {
+    // Sign out from Firebase (Google)
+    await signOut(auth);
+
+    // Clear stored user data (localStorage + sessionStorage)
+    localStorage.removeItem("email");
+    sessionStorage.clear();
+
+    // Navigate to login page
+    navigate("/");
+
+    alert("You have been logged out successfully!");
+  } catch (error) {
+    console.error("Logout error:", error);
+  }
+};
+
+
   return (
     <>
       {/* Top Header */}
@@ -74,7 +100,7 @@ const Header = () => {
         {/* Bottom Navigation Menu */}
         <div style={{ backgroundColor: "#232f3e", padding: "10px 20px", fontSize: "14px" }}>
           <Container fluid>
-            <div className="d-flex gap-3 flex-wrap text-white justify-content-start">
+            <div className="d-flex gap-3 flex-wrap text-white justify-content-between">
               <div>☰ All</div>
               <div>Amazon mini TV</div>
               <div>Sell</div>
@@ -87,6 +113,18 @@ const Header = () => {
               <div>New Releases</div>
               <div>Home & Kitchen</div>
               <div>Amazon Pay</div>
+              <button
+  onClick={handleLogout}
+  style={{
+    background: "none",
+    border: "none",
+    color: "white",
+    cursor: "pointer",
+  }}
+>
+  Logout
+</button>
+
             </div>
           </Container>
         </div>

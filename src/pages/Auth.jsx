@@ -1,14 +1,39 @@
-import React, { useState } from 'react'
-import { Button, Card, Container, Form } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Button, Card, Container, Form, Spinner } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { loginApi, registerApi } from '../SERVICES/allApi'
+import { auth,provider } from '../googleSign/config'
+import { signInWithPopup } from 'firebase/auth'
+import Home from './Home'
 
 
 
 
-
+  
 
 const Auth = ({insideRegister}) => {
+
+  
+const [value,setValue] =useState('')
+ const handleClick = () => {
+  signInWithPopup(auth, provider)
+    .then((data) => {
+      setValue(data.user.email);
+      localStorage.setItem("email", data.user.email);
+      navigate("/home"); // ✅ redirect to home page
+    })
+    .catch((err) => {
+      console.error("Google Sign-In Error:", err);
+    });
+};
+
+
+useEffect(()=>{
+setValue(localStorage.getItem("email"))
+},)
+
+
+  const [islogin , setIslogin]= useState(false)
 
 
 
@@ -58,8 +83,11 @@ e.preventDefault()
         if (result.status==200){
             sessionStorage.setItem("user",JSON.stringify(result.data.user))
             sessionStorage.setItem("token",result.data.token)
-             navigate('/home')
-             setUserinput({username:"",email:"",password:""})
+          
+  navigate("/home")
+  setUserinput({username:"",email:"",password:""})
+setIslogin(false)
+   
         }else{
             if(result.response.status==404){
                 alert(result.response.data)
@@ -152,7 +180,10 @@ e.preventDefault()
                   fontWeight: "500",
                 }}
               >
+                
                 Login
+
+                
               </Button>
             }
 
@@ -217,22 +248,26 @@ e.preventDefault()
           >
             <span style={{ background: "#fff", padding: "0 10px" }}>or</span>
           </p>
-          <Button
-            variant="light"
-            className="w-100 border"
-            style={{
-              borderRadius: "5px",
-              fontSize: "14px",
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "8px",
-            }}
-          >
-           <i className='fa-brands-fa-google'></i>
-            Login with Google
-          </Button>
+          <div>
+           <Button
+  onClick={handleClick}
+  variant="light"
+  className="w-100 border"
+  style={{
+    borderRadius: "5px",
+    fontSize: "14px",
+    padding: "8px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+  }}
+>
+  <i className="fa-brands fa-google"></i>
+  Login with Google
+</Button>
+
+          </div>
         </div>
       </Container>
     </div></>
