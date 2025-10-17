@@ -7,6 +7,8 @@ import img19 from "../assets/img19.png";
 import img18 from "../assets/img18.png";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
+
 
 const Cart = () => {
   // 🛒 Cart Data
@@ -263,7 +265,9 @@ const Cart = () => {
                 Subtotal ({cartItems.length} item
                 {cartItems.length > 1 ? "s" : ""}): SAR {subtotal}
               </h6>
-              <Button
+              <Link to={'/checkout'}>
+              <Button 
+              
                 variant="warning"
                 className="fw-bold w-100"
                 style={{
@@ -274,6 +278,7 @@ const Cart = () => {
               >
                 Proceed to Buy
               </Button>
+              </Link>
             </div>
 
             <div
