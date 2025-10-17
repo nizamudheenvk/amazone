@@ -1,18 +1,19 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-
+import {getAuth,GoogleAuthProvider} from 'firebase/auth'
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY_FROM_FIREBASE",
-  authDomain: "amazoon-19d67.firebaseapp.com",
-  projectId: "amazoon-19d67",
-  storageBucket: "amazoon-19d67.appspot.com",
-  messagingSenderId: "740588146259", // example
-  appId: "YOUR_APP_ID_FROM_FIREBASE",
-  measurementId: "YOUR_MEASUREMENT_ID_FROM_FIREBASE"
+  apiKey: "AIzaSyCx48e1kYGNT3itcOO_p-wv57xEtFSjArM",
+  authDomain: "amazoon-10d67.firebaseapp.com",
+  projectId: "amazoon-10d67",
+  storageBucket: "amozoon-10d67.firebasestorage.app",
+  messagingSenderId: "740588146259",
+  appId: "1:740588146259:web:c4ab781ddd374b62e1c0a6",
+  measurementId: "G-MENJKHS7Z1"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+const auth = getAuth(app)
 
-export { auth, provider };
+const provider = new GoogleAuthProvider()
+
+export {auth,provider}
