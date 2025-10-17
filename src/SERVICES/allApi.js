@@ -7,6 +7,6 @@ import SERVERURL from "./ServerUrl"
  }
 
   export const loginApi = async (reqBody)=>{
-    return await commonAPi("POST",`${SERVERURL}/login`,reqBody)
+    return await commonAPi("POST",`${SERVERURL}/`,reqBody)
  }
 

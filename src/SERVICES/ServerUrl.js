@@ -1,2 +1,4 @@
-const SERVERURL = "http://localhost:3000"
+const SERVERURL = "https://amazone-server-eb85.onrender.com/"
+
+
 export default SERVERURL
