@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom' // 👈 to get image data
+import { Link, useLocation } from 'react-router-dom' 
 import img29 from '../assets/img29.png'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
@@ -10,7 +10,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 
 const ProductView = () => {
   const location = useLocation();
-  const selectedImage = location.state?.image || img29; // 👈 use passed image or fallback
+  const selectedImage = location.state?.image || img29; 
 
   return (
     <> 

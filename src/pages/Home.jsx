@@ -10,13 +10,13 @@ import Header from "../Components/Header";
 const Home = () => {
   const navigate = useNavigate();
 
-  // ✅ Automatically import all images in /assets
+ 
   const images = import.meta.glob("../assets/*.png", { eager: true });
 
-  // ✅ Convert to simple map (filename → URL)
+
   const imageMap = {};
   for (const path in images) {
-    const fileName = path.split("/").pop(); // e.g. img1.png
+    const fileName = path.split("/").pop(); 
     imageMap[`/assets/${fileName}`] = images[path].default;
   }
 

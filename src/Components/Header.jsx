@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import { auth} from '../googleSign/config' // ✅ ensure db is exported from your config
-import { doc, deleteDoc } from 'firebase/firestore'; // 🔥 Firestore imports
+import { auth} from '../googleSign/config' 
+import { doc, deleteDoc } from 'firebase/firestore'; 
 
 const Header = () => {
   const navigate = useNavigate();
@@ -138,7 +138,7 @@ const Header = () => {
               <div>Amazon Pay</div>
 
               {/* 🔘 Logout Button */}
-              <button
+              {/* <button
                 onClick={handleLogout}
                 style={{
                   background: 'none',
@@ -148,7 +148,7 @@ const Header = () => {
                 }}
               >
                 Logout
-              </button>
+              </button> */}
             </div>
           </Container>
         </div>

@@ -125,7 +125,7 @@ setIslogin(false)
         {/* Card */}
         <Card style={{ width: "350px", borderRadius: "8px" }}>
           <Card.Body>
-            <h4 style={{ fontWeight: "500" }}>Create Account</h4>
+            <h5> { insideRegister?'create':'sign in to'}  your account</h5>
 
             <Form>
              { 
@@ -184,30 +184,18 @@ setIslogin(false)
 
             </Form>
 
-            {/* <div className="mt-3">
-              <p style={{ fontSize: "13px", marginBottom: "5px" }}>
-                <strong>Buying for work?</strong>
-              </p>
-              <a href="#" style={{ fontSize: "13px", textDecoration: "none" }}>
-                Create a free business account
-              </a>
-            </div> */}
+           
 
            {insideRegister?
            <div className="mt-3" style={{ fontSize: "13px" }}>
               Already have an account?{" "}
-              {/* <a href="/" style={{ textDecoration: "none" }}>
-                Login ▸
-              </a> */}
+             
               <Link to={'/'}style={{textDecoration:"none"}}>login</Link>
             </div>
             :
              <div className="mt-3" style={{ fontSize: "13px" }}>
              New User? please click here to{" "}
-              {/* <a href="/register" style={{ textDecoration: "none" }}>
-                Register ▸
-              </a> */}
-
+            
               <Link to={'/register'} style={{textDecoration:"none"}}>
               Register ▸</Link>
             </div>
