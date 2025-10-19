@@ -4,35 +4,36 @@ import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth} from '../googleSign/config' 
 import { doc, deleteDoc } from 'firebase/firestore'; 
+// import Home from "/Home"
 
 const Header = () => {
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      const user = auth.currentUser;
+  // const handleLogout = async () => {
+  //   try {
+  //     const user = auth.currentUser;
 
-      if (user) {
-        // 🧹 Delete user data from Firestore
-        await deleteDoc(doc(db, 'users', user.uid));
-      }
+  //     if (user) {
+  //       // 🧹 Delete user data from Firestore
+  //       await deleteDoc(doc(db, 'users', user.uid));
+  //     }
 
-      // 🚪 Sign out from Firebase
-      await signOut(auth);
+  //     // 🚪 Sign out from Firebase
+  //     await signOut(auth);
 
-      // 🧼 Clear local and session storage
-      localStorage.removeItem('email');
-      sessionStorage.clear();
+  //     // 🧼 Clear local and session storage
+  //     localStorage.removeItem('email');
+  //     sessionStorage.clear();
 
-      // 🔁 Redirect to login/home page
-      navigate('/');
+  //     // 🔁 Redirect to login/home page
+  //     navigate('/');
 
-      alert('You have been logged out and your data has been cleared!');
-    } catch (error) {
-      console.error('Logout error:', error);
-      alert('Error during logout: ' + error.message);
-    }
-  };
+  //     alert('You have been logged out and your data has been cleared!');
+  //   } catch (error) {
+  //     console.error('Logout error:', error);
+  //     alert('Error during logout: ' + error.message);
+  //   }
+  // };
 
   return (
     <>
@@ -42,11 +43,14 @@ const Header = () => {
           <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between">
             {/* Left: Logo & Location */}
             <div className="d-flex align-items-center mb-2 mb-lg-0">
+              <Link to={'/home'}>
               <img
+             
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="Amazon Logo"
                 style={{ height: '30px', marginRight: '10px' }}
               />
+              </Link>
               <div className="d-none d-md-block">
                 <small style={{ color: '#ccc' }}>Delivering to Surat 394210</small>
                 <br />

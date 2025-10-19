@@ -236,14 +236,14 @@ const Cart = () => {
             </div>
 
             {/* ADD TO CART DEMO BUTTON */}
-            <div className="text-center mb-4">
+            {/* <div className="text-center mb-4">
               <Button
                 variant="success"
                 onClick={() => handleAddToCart(newProduct)}
               >
                 + Add New Product to Cart
               </Button>
-            </div>
+            </div> */}
 
             <p className="text-muted small border-top pt-3">
               The price and availability of items are subject to change. The
